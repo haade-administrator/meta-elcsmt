@@ -1,4 +1,4 @@
-FILESEXTRAPATHS:prepend "${THISDIR}/files:"
+FILESEXTRAPATHS_prepend := "${THISDIR}/files:"
 
 do_install_append() {
     install -d ${D}${nonarch_base_libdir}/dtb
@@ -8,3 +8,4 @@ do_install_append() {
 }
 
 FILES_${PN}-devicetree += "${nonarch_base_libdir}/dtb/*"
+
