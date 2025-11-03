@@ -1,4 +1,4 @@
-FILESEXTRAPATHS_prepend := "${THISDIR}/files:"
+FILESEXTRAPATHS:prepend "${THISDIR}/files:"
 
 do_install_append() {
     install -d ${D}${nonarch_base_libdir}/dtb
