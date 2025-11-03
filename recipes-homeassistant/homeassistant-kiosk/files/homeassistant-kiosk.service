@@ -1,0 +1,13 @@
+[Unit]
+Description=Home Assistant Kiosk (Chromium)
+After=network-online.target
+
+[Service]
+Type=simple
+User=root
+Environment=DISPLAY=:0
+ExecStart=/usr/bin/homeassistant-kiosk
+Restart=on-failure
+
+[Install]
+WantedBy=graphical.target
